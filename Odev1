@@ -1,13 +1,19 @@
-#include <iostream>
+using System;
 
-using namespace std;
+class Solution
+{
+    static void Main(String[] args)
+    {
+        // Declare a variable named 'inputString' to hold our input.
+        String inputString;
 
-int main() {
-    string inputString; 
-    getline(cin, inputString); 
+        // Read a full line of input from stdin and save it to our variable, inputString.
+        inputString = Console.ReadLine();
 
-    cout << "Hello, World." << endl;
-    cout << inputString << endl;
+        // Print a string literal saying "Hello, World." to the stdout.
+        Console.WriteLine("Hello, World.");
 
-    return 0;
+        // Prints the contents of inputString to stdout.
+        Console.WriteLine(inputString);
+    }
 }
