@@ -5,26 +5,26 @@ class Solution
 {
     static void Main(String[] args)
     {
-        int positiveNumbers = 0;
-        int negativeNumbers = 0;
-        int zeroNumbers = 0;
-        
+        var positiveNumbers = 0;
+        var negativeNumbers = 0;
+        var zeroNumbers = 0;
+        //No need to capture the size of array. I use array's length property instead.
         ReadLine();
-        int arr_temp = ReadLine().Split(' ');
-        int dizi = Array.ConvertAll(arr_temp, Int32.Parse);
+        var arr_temp = ReadLine().Split(' ');
+        var arr = Array.ConvertAll(arr_temp, Int32.Parse);
 
         for (int arr_i = 0; arr_i < arr.Length; arr_i++)
         {
-            if (dizi[arr_i] > 0)
+            if (arr[arr_i] > 0)
                 ++positiveNumbers;
-            else if (dizi[arr_i] < 0)
+            else if (arr[arr_i] < 0)
                 ++negativeNumbers;
             else
                 ++zeroNumbers;
         }
 
-        WriteLine((double)positiveNumbers / dizi.Length);
-        WriteLine((double)negativeNumbers / dizi.Length);
-        WriteLine((double)zeroNumbers / dizi.Length);
+        WriteLine((double)positiveNumbers / arr.Length);
+        WriteLine((double)negativeNumbers / arr.Length);
+        WriteLine((double)zeroNumbers / arr.Length);
     }
 }
