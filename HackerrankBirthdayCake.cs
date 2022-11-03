@@ -1,18 +1,13 @@
-public static int birthdayCakeCandles(List<int> candles)
-{
-   int count = 0;
-   int max = 0;
-   foreach (var candle in candles)
-   {
-      int num = candle;
-      if(num > max)
-      {
-         max = num;
-         count = 1;
-      }else if(max == num)
-      {
-         count++;
-      }
-   }
-   return count;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+    static void Main(String[] args) {
+        Console.ReadLine();
+        var heights = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        var max = heights.Max();
+        var count = heights.Count(it => it == max);
+        Console.WriteLine(count);
+    }
 }
