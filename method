@@ -1,0 +1,21 @@
+public void EkranaYazdir(int deger)
+{
+    Console.WriteLine(deger);
+}
+
+public void EkranaYazdir(string deger)
+{
+    Console.WriteLine(deger);
+}
+
+public void EkranaYazdir(string deger1,string deger2)
+{
+     Console.WriteLine(deger1 + deger2);
+}
+
+int main()
+{
+  EkranaYazdir(1);
+  EkranaYazdir("string");
+  EkranaYazdir("string", "string");
+}
